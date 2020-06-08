@@ -1,5 +1,6 @@
 import streamlit as st
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 def select():
     st.title("Escolha uma opção abaixo")
@@ -10,7 +11,12 @@ def select():
         st.title("Em matemática, uma função constante é uma função cujo valor (de saída) é o mesmo para todos os "
                  "valores de entrada")
         const = st.number_input('Insira o valor de (x)')
-        st.write("𝑓 (𝑥) = " + "{:.2f}".format(const))
+        st.title("𝑓 (𝑥) = " + "{:.2f}".format(const))
+
+        plt.axhline(y=const, color='r', linestyle='-')
+        plt.title('Grafico da Função')
+        st.pyplot()
+
         st.markdown(
             """
             Veja mais detalhes neste [video](https://www.youtube.com/watch?v=ivRjk7T6AXw) sobre funções
@@ -21,7 +27,7 @@ def select():
         st.title("Uma das regras de derivação diz que: a derivada de uma função constante é igual"
                  " a zero")
         st.number_input('Insira o valor de (x)')
-        st.write("𝑓' (𝑥) = " + str(0))
+        st.title("𝑓' (𝑥) = " + str(0))
         st.markdown(
             """
             Veja mais detalhes neste [video](https://www.youtube.com/watch?v=hD5OnGRZ9Do) sobre derivadas.
@@ -35,6 +41,6 @@ def select():
         st.write("𝑓' (𝑥) = " + str(0))
         st.markdown(
             """
-            Veja mais detalhes neste [video](https://www.youtube.com/watch?v=hD5OnGRZ9Do) sobre derivadas.
+            Veja mais detalhes neste [video](https://www.youtube.com/watch?v=hD5OnGRZ9Do) sobre integrais definidas.
             """
         )
