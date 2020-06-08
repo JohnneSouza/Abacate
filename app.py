@@ -9,18 +9,16 @@ from src.pages.constants import constants
 
 LOGGER = get_logger(__name__)
 
-# Dictionary of
-# demo_name -> (demo_function, demo_description)
 PAGE = OrderedDict(
     [
         ("Página Inicial", (welcome.intro, None)),
         (
-            "𝑓(𝑥) = k",
+            "𝑓 (𝑥) = k",
             (
                 constants.select,
                 """
-### Função constante
-Em matemática, uma função constante é uma função cujo valor (de saída) é o mesmo para todos os valores de entrada
+### Constantes
+
 """,
             ),
         ),
