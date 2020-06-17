@@ -6,6 +6,7 @@ import streamlit as st
 from streamlit.logger import get_logger
 from src.messages import welcome
 from src.pages.constants import constants
+from src.pages.constants_power_x import constants_power_x
 
 LOGGER = get_logger(__name__)
 
@@ -16,6 +17,16 @@ PAGE = OrderedDict(
             "𝑓 (𝑥) = k",
             (
                 constants.select,
+                """
+### Constantes
+
+""",
+            ),
+        ),
+(
+            "𝑓 (𝑥) = 𝑥^k",
+            (
+                constants_power_x.select,
                 """
 ### Constantes
 

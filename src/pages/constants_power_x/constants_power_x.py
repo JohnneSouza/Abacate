@@ -1,5 +1,5 @@
 import streamlit as st
-import matplotlib.pyplot as plt
+
 
 def select():
     st.title("Escolha uma opção abaixo")
@@ -7,14 +7,11 @@ def select():
     opt = st.radio("", ('Função', 'Derivada', 'Integral Definida'))
 
     if opt == 'Função':
-        st.title("Em matemática, uma função constante é uma função cujo valor (de saída) é o mesmo para todos os "
-                 "valores de entrada")
-        const = st.number_input('Insira o valor de (x)')
-        st.title("𝑓 (𝑥) = " + "{:.2f}".format(const))
+        x_var = st.number_input('Insira o valor de (x)')
+        k_var = st.number_input('Insira o valor de (k)')
 
-        plt.axhline(y=const, color='r', linestyle='-')
-        plt.title('Grafico da Função')
-        st.pyplot()
+        st.title("𝑓 (𝑥) = x^k")
+        st.title("f (𝑥) = {: .2f}".format(x_var, x_var**k_var))
 
         st.markdown(
             """
@@ -23,10 +20,21 @@ def select():
         )
 
     if opt == 'Derivada':
-        st.title("Uma das regras de derivação diz que: a derivada de uma função constante é igual"
-                 " a zero")
-        st.number_input('Insira o valor de (x)')
-        st.title("𝑓' (𝑥) = " + str(0))
+        st.title("Derivada utilizando a regra do tombo")
+        x_var = st.number_input('Insira o valor de (x)')
+        k_var = st.number_input('Insira o valor de (k)')
+
+        st.title("𝑓' (𝑥) = x^k")
+
+        if k_var != 0 or x_var != 0:
+            try:
+                st.title("𝑓' (𝑥) = {}^{}".format(x_var, k_var))
+                st.title("𝑓' (𝑥) = {}*{}^{}-1".format(k_var, x_var, k_var))
+                st.title("𝑓' (𝑥) = {}*{}^{}".format(k_var, x_var, k_var - 1))
+                st.title("𝑓' (𝑥) = {:.2f}".format(k_var*x_var**(k_var-1)))
+            except:
+                st.title("O valor atual é invalido, tente trocar o valor de X ou K")
+
         st.markdown(
             """
             Veja mais detalhes neste [video](https://www.youtube.com/watch?v=hD5OnGRZ9Do) sobre derivadas.
