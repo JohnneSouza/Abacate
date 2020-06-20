@@ -19,13 +19,13 @@ def intro():
         Para a construção dessa aplicação foram utilizadas as seguintes ferramentas:
         - Linguagem Python -> [python.org](https://python.org/)
         - Streamlit Framework -> [streamlit.io](https://www.streamlit.io/)
-        - Google App Engine -> [cloud.google.com](https://cloud.google.com/)  
+        - Google Compute Engine -> [cloud.google.com](https://cloud.google.com/)  
 
         👈 Selecione uma opção a partir do menu ao lado para utilizar o Abacate 
         
         
 
-        ### Quer saber como feito?
+        ### Quer saber como foi feito?
 
         - Dê uma olhadinha no código aqui no [github](https://github.com/JohnneSouza/Abacate)
 
