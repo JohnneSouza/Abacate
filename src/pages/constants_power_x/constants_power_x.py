@@ -21,16 +21,14 @@ def select():
 
     if opt == 'Derivada':
         st.title("Derivada utilizando a regra do tombo")
-        x_var = st.number_input('Insira o valor de (x)')
+        x_var = st.number_input('Insira o valor de (𝑥)')
         k_var = st.number_input('Insira o valor de (k)')
-
-        st.title("𝑓' (𝑥) = x^k")
 
         if k_var != 0 or x_var != 0:
             try:
-                st.title("𝑓' (𝑥) = {}^{}".format(x_var, k_var))
-                st.title("𝑓' (𝑥) = {}*{}^{}-1".format(k_var, x_var, k_var))
-                st.title("𝑓' (𝑥) = {}*{}^{}".format(k_var, x_var, k_var - 1))
+                st.title("Se 𝑥 = {} e k = {}".format(x_var, k_var))
+                st.title("𝑓' (𝑥) = {}*{}^({}-1)".format("k", "𝑥", "k"))
+                st.title("𝑓' (𝑥) = {}*{}^({})".format(k_var, x_var, k_var - 1))
                 st.title("𝑓' (𝑥) = {:.2f}".format(k_var*x_var**(k_var-1)))
             except:
                 st.title("O valor atual é invalido, tente trocar o valor de X ou K")
