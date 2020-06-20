@@ -1,6 +1,6 @@
 import streamlit as st
 
-
+# TODO TROCAR LINK DOS VIDEOS
 def select():
     st.title("Escolha uma opção abaixo")
 
@@ -11,7 +11,7 @@ def select():
         k_var = st.number_input('Insira o valor de (k)')
 
         st.title("𝑓 (𝑥) = x^k")
-        st.title("f (𝑥) = {: .2f}".format(x_var, x_var**k_var))
+        st.title("f (𝑥) = {: .2f}".format(x_var**k_var))
 
         st.markdown(
             """
