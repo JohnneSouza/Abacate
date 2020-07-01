@@ -38,10 +38,11 @@ def select():
 
         st.markdown(
             """
-            Veja mais detalhes neste [video](https://www.youtube.com/watch?v=hD5OnGRZ9Do) sobre derivadas.
+            Veja mais detalhes neste [video](https://www.youtube.com/watch?v=nfARXFLUKMc) sobre Derivada da Função Exponencial.
             """
         )
 
+    # TODO IMPLEMENTAR CODIGO
     if opt == 'Integral Definida':
         st.title("O nome Integral Definida vem do fato que a integral está restrita a um intervalo.")
         st.number_input('Insira o valor de (x)')
