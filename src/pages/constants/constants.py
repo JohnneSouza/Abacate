@@ -10,7 +10,7 @@ def select():
         st.title("Em matemática, uma função constante é uma função cujo valor (de saída) é o mesmo para todos os "
                  "valores de entrada")
         const = st.number_input('Insira o valor de (x)')
-        st.title("𝑓 (𝑥) = " + "{:.2f}".format(const))
+        st.title("𝑓 (𝑥) = " + "{:.4f}".format(const))
 
         plt.axhline(y=const, color='r', linestyle='-')
         plt.title('Grafico da Função')

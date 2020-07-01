@@ -7,28 +7,34 @@ from streamlit.logger import get_logger
 from src.messages import welcome
 from src.pages.constants import constants
 from src.pages.constants_power_x import constants_power_x
+from src.pages.x_power_constant import x_power_constant
 
 LOGGER = get_logger(__name__)
 
 PAGE = OrderedDict(
     [
         ("Página Inicial", (welcome.intro, None)),
+        ("𝑓 (𝑥) = k", (constants.select,
+                         """
+                ### Constantes
+
+                """,),),
         (
-            "𝑓 (𝑥) = k",
+            "𝑓 (𝑥) = 𝑥^k",
             (
-                constants.select,
+                constants_power_x.select,
                 """
 ### Constantes
 
 """,
             ),
         ),
-(
-            "𝑓 (𝑥) = 𝑥^k",
+        (
+            "𝑓 (𝑥) = k^𝑥",
             (
-                constants_power_x.select,
+                x_power_constant.select,
                 """
-### Constantes
+### 
 
 """,
             ),
