@@ -44,7 +44,7 @@ def select():
         x_var = st.number_input('Insira o valor de (x)')
         k_var = st.number_input('Insira o valor de (k)')
         st.title("Se 𝑥 = {} e k = {}".format(x_var, k_var))
-        st.write("𝑓 (𝑥) = " + k_var**x_var*math.log(x_var))
+        st.write("𝑓 (𝑥) = {}".format(k_var**x_var*math.log(x_var)))
         st.markdown(
             """
             Veja mais detalhes neste [site](https://www.dicasdecalculo.com.br/conteudos/integrais/integral-definida/) sobre integrais definidas.
