@@ -8,6 +8,9 @@ from src.messages import welcome
 from src.pages.constants import constants
 from src.pages.constants_power_x import constants_power_x
 from src.pages.x_power_constant import x_power_constant
+from src.pages.e_power_x import e_power_x
+from src.pages.log_k import log_k
+from src.pages.ln_x import ln_x
 
 LOGGER = get_logger(__name__)
 
@@ -33,6 +36,36 @@ PAGE = OrderedDict(
             "𝑓 (𝑥) = k^𝑥",
             (
                 x_power_constant.select,
+                """
+### 
+
+""",
+            ),
+        ),
+        (
+            "𝑓 (𝑥) = e^𝑥",
+            (
+                e_power_x.select,
+                """
+### 
+
+""",
+            ),
+        ),
+        (
+            "𝑓 (𝑥) = logK(x)",
+            (
+                log_k.select,
+                """
+### 
+
+""",
+            ),
+        ),
+        (
+            "𝑓 (𝑥) = ln(x)",
+            (
+                ln_x.select,
                 """
 ### 
 
