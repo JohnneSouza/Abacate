@@ -11,6 +11,10 @@ from src.pages.x_power_constant import x_power_constant
 from src.pages.e_power_x import e_power_x
 from src.pages.log_k import log_k
 from src.pages.ln_x import ln_x
+from src.pages.one_over_x import one_over_x
+from src.pages.sin_x import sin_x
+from src.pages.cos_x import cos_x
+from src.pages.tg_x import tg_x
 
 LOGGER = get_logger(__name__)
 
@@ -75,7 +79,7 @@ PAGE = OrderedDict(
         (
             "𝑓 (𝑥) = 1/x",
             (
-                ln_x.select,
+                one_over_x.select,
                 """
 ### 
 
@@ -85,7 +89,7 @@ PAGE = OrderedDict(
         (
             "𝑓 (𝑥) = sen(x)",
             (
-                ln_x.select,
+                sin_x.select,
                 """
 ### 
 
@@ -95,7 +99,7 @@ PAGE = OrderedDict(
         (
             "𝑓 (𝑥) = cos(x)",
             (
-                ln_x.select,
+                cos_x.select,
                 """
 ### 
 
@@ -105,7 +109,7 @@ PAGE = OrderedDict(
         (
             "𝑓 (𝑥) = tan(x)",
             (
-                ln_x.select,
+                tg_x.select,
                 """
 ### 
 
