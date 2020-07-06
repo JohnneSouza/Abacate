@@ -139,7 +139,7 @@ def run():
     page()
 
     if show_code:
-        st.markdown("## Code")
+        st.markdown("## Código fonte desta página")
         sourcelines, _ = inspect.getsourcelines(page)
         st.code(textwrap.dedent("".join(sourcelines[1:])))
 

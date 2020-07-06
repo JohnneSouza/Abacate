@@ -13,7 +13,12 @@ def select():
         k_var = st.number_input('Insira o valor de (k)')
 
         st.title("𝑓 (𝑥) = x^k")
-        st.title("𝑓 (𝑥) = {: .2f}".format(x_var ** k_var))
+        try:
+            if x_var > 50 or k_var > 50:
+                st.title("Valores muito grandes podem causa problemas, cuidado.⚠")
+            st.title("𝑓 (𝑥) = {: .2f}".format(x_var ** k_var))
+        except:
+            st.title("Valor inválido, tente trocar o valor de X ou K")
 
         st.markdown(
             """
