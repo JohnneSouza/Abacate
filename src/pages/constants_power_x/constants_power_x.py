@@ -1,5 +1,5 @@
 import streamlit as st
-import math
+import numpy as np
 
 
 def select():
@@ -43,11 +43,15 @@ def select():
         st.title("O nome Integral Definida vem do fato que a integral está restrita a um intervalo.")
         x_var = st.number_input('Insira o valor de (x)')
         k_var = st.number_input('Insira o valor de (k)')
-        st.title("Se 𝑥 = {} e k = {}".format(x_var, k_var))
-        st.write("𝑓 (𝑥) = {}".format(k_var**x_var*math.log(x_var)))
-        st.markdown(
-            """
-            Veja mais detalhes neste [site](https://www.dicasdecalculo.com.br/conteudos/integrais/integral-definida/) sobre integrais definidas.
-            """
-        )
-
+        if k_var != 0:
+            try:
+                st.title("Se 𝑥 = {} e k = {}".format(x_var, k_var))
+                st.write("𝑓 (𝑥) = {}^{}/ln({}) + C".format(k_var, x_var, k_var))
+                st.write("𝑓 ({}) = {:.4f}".format(x_var, x_var**k_var/np.log(k_var)))
+            except:
+                st.title("O valor atual é inválido, tente trocar o valor de X")
+            st.markdown(
+                """
+                Veja mais detalhes neste [site](https://www.dicasdecalculo.com.br/conteudos/integrais/integral-definida/) sobre integrais definidas.
+                """
+            )

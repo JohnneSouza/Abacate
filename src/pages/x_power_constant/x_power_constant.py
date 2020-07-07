@@ -25,7 +25,8 @@ def select():
             Veja mais detalhes neste [video](https://www.youtube.com/watch?v=ivRjk7T6AXw) sobre funções
             """
         )
-    #
+
+
     if opt == 'Derivada':
         st.title("Derivada")
         x_var = st.number_input('Insira o valor de (𝑥)')
@@ -47,7 +48,7 @@ def select():
             """
         )
 
-    # TODO IMPLEMENTAR CODIGO
+
     if opt == 'Integral Definida':
         st.title("O nome Integral Definida vem do fato que a integral está restrita a um intervalo.")
         st.number_input('Insira o valor de (x)')

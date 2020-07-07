@@ -29,7 +29,7 @@ PAGE = OrderedDict(
         (
             "𝑓 (𝑥) = 𝑥^k",
             (
-                constants_power_x.select,
+                x_power_constant.select,
                 """
 ### Constantes
 
@@ -39,7 +39,7 @@ PAGE = OrderedDict(
         (
             "𝑓 (𝑥) = k^𝑥",
             (
-                x_power_constant.select,
+                constants_power_x.select,
                 """
 ### 
 
