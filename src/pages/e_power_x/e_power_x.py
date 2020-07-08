@@ -28,5 +28,10 @@ def select():
             st.title("O valor atual é inválido, tente trocar o valor de X")
 
     if opt == 'Integral Definida':
-        st.title("Integral Definida")
-        st.title("Nao implementado")
+        x_var = st.number_input('Insira o valor de (𝑥)')
+        st.title("Se 𝑥 = {}".format(x_var))
+        try:
+            st.title("∫ 𝑓(𝑥)d𝑥 = {}^{} + C".format("e", x_var))
+            st.title("{}^{} + C".format("e", x_var))
+        except:
+            st.title("O valor atual é inválido, tente trocar o valor de X")
