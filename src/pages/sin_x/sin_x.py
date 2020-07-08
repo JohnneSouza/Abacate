@@ -22,7 +22,7 @@ def select():
         try:
             st.title("𝑓' (𝑥) = sen(x)".format(x_var))
             st.title("𝑓' sen({}) = cos({})".format(x_var, x_var))
-            st.title("cos({}) = {:.4f}".format(x_var, math.sin(math.radians(x_var))))
+            st.title("cos({}) = {:.4f}".format(x_var, math.cos(math.radians(x_var))))
         except:
             st.title("Valor inválido, tente trocar o valor de X")
 
