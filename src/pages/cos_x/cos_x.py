@@ -17,8 +17,14 @@ def select():
             st.title("Valor inválido, tente trocar o valor de X")
 
     if opt == 'Derivada':
-        st.title("Derivada")
-        st.title("Nao implementado")
+        x_var = st.number_input('Insira o valor de 𝑥 (Ângulo) rad')
+        st.title("Se 𝑥 = {} rad".format(x_var))
+        try:
+            st.title("𝑓' (𝑥) = cos(x)".format(x_var))
+            st.title("𝑓' cos({}) = -sen({})".format(x_var, x_var))
+            st.title("-sen({}) = {:.4f}".format(x_var, -1*math.sin(math.radians(x_var))))
+        except:
+            st.title("Valor inválido, tente trocar o valor de X")
 
     if opt == 'Integral Definida':
         st.title("Integral Definida")
