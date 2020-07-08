@@ -48,8 +48,8 @@ def select():
 
     if opt == 'Integral Definida':
         st.title("O nome Integral Definida vem do fato que a integral está restrita a um intervalo.")
-        st.number_input('Insira o valor de (x)')
-        st.write("𝑓' (𝑥) = " + str(0))
+        x_var = st.number_input('Insira o valor de (𝑥)')
+        st.write("𝑓' ({}) = 0 ".format(x_var))
         st.markdown(
             """
             Veja mais detalhes neste [site](https://www.dicasdecalculo.com.br/conteudos/integrais/integral-definida/) sobre integrais definidas.
