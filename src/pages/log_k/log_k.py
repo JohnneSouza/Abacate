@@ -26,7 +26,7 @@ def select():
             try:
                 st.title("𝑓' (𝑥) = log{}({})".format(k_var, x_var))
                 st.title("𝑓' ({}) = log{}({})".format(x_var, k_var, x_var))
-                st.title("𝑓' ({}) = 1/{}*ln({})".format(x_var, x_var, k_var))
+                st.title("𝑓' ({}) = 1/{}*ln({})".format(x_var, k_var, k_var))
                 st.title("𝑓' ({}) = {:.4f}".format(x_var, 1/x_var*math.log(k_var)))
             except:
                 st.title("O valor atual é inválido, tente trocar o valor de X ou K")
