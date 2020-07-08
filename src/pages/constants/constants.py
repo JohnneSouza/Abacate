@@ -35,9 +35,8 @@ def select():
 
     if opt == 'Integral Definida':
         st.title("O nome Integral Definida vem do fato que a integral está restrita a um intervalo.")
-        st.number_input('Insira o valor de (x)')
         x_var = st.number_input('Insira o valor de (x)')
-        st.write("𝑓' ({}) = ".format(x_var, str(0)))
+        st.write("𝑓' ({}) = {}".format(x_var, str(0)))
         st.markdown(
             """
             Veja mais detalhes neste [site](https://www.dicasdecalculo.com.br/conteudos/integrais/integral-definida/) sobre integrais definidas.
